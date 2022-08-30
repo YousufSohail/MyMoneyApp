@@ -12,12 +12,12 @@ import com.yousufsohail.android.home.repository.StocksRepository
 import dagger.Module
 import dagger.Provides
 import dagger.hilt.InstallIn
-import dagger.hilt.android.components.ViewModelComponent
 import dagger.hilt.android.qualifiers.ApplicationContext
+import dagger.hilt.components.SingletonComponent
 import javax.inject.Singleton
 
 @Module
-@InstallIn(ViewModelComponent::class)
+@InstallIn(SingletonComponent::class)
 class HomeModule {
     @Provides
     fun provideContext(application: App): Context = application.applicationContext

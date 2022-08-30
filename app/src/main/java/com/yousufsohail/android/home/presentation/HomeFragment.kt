@@ -17,14 +17,14 @@ class HomeFragment : Fragment() {
 
     val viewModel: HomeViewModel by viewModels()
 
-    override fun onCreateView(inflater: LayoutInflater, container: ViewGroup?, savedInstanceState: Bundle?): View {
-        return ComposeView(requireContext()).apply {
-            setContent {
-                Box(modifier = Modifier.fillMaxSize()) {
-
-                }
-            }
-        }
-    }
+//    override fun onCreateView(inflater: LayoutInflater, container: ViewGroup?, savedInstanceState: Bundle?): View {
+//        return ComposeView(requireContext()).apply {
+//            setContent {
+//                Box(modifier = Modifier.fillMaxSize()) {
+//
+//                }
+//            }
+//        }
+//    }
 
 }
