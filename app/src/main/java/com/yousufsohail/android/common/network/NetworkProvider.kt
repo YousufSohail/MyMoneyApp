@@ -1,4 +1,4 @@
-package com.yousufsohail.android.network
+package com.yousufsohail.android.common.network
 
 import com.yousufsohail.android.BuildConfig
 import com.squareup.moshi.Moshi

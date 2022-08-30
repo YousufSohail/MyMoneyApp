@@ -1,4 +1,4 @@
-package com.yousufsohail.android.home.ui
+package com.yousufsohail.android
 
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle

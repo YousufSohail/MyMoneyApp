@@ -1,7 +1,7 @@
-package com.yousufsohail.android.network
+package com.yousufsohail.android.common.network
 
 import com.yousufsohail.android.R
-import com.yousufsohail.android.resources.StringResourceProvider
+import com.yousufsohail.android.common.resources.StringResourceProvider
 import kotlinx.coroutines.CoroutineDispatcher
 import retrofit2.HttpException
 import java.io.EOFException

@@ -4,11 +4,9 @@
     android:id="@+id/navigation.xml"
     app:startDestination="@id/homeFragment">
 
-
     <fragment
         android:id="@+id/homeFragment"
-        android:name="com.yousufsohail.android.home.ui.HomeFragment"
-        android:label="HomeFragment" >
-    </fragment>
+        android:name="com.yousufsohail.android.home.presentation.HomeFragment"
+        android:label="MyMoneyApp" />
 
 </navigation>

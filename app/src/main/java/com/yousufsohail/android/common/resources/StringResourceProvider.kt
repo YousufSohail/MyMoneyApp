@@ -1,4 +1,4 @@
-package com.yousufsohail.android.resources
+package com.yousufsohail.android.common.resources
 
 import android.content.Context
 import androidx.annotation.StringRes

@@ -1,4 +1,4 @@
-package com.yousufsohail.android.home.models
+package com.yousufsohail.android.home.api
 
 import com.squareup.moshi.JsonClass
 

@@ -1,4 +1,4 @@
-package com.yousufsohail.android.app.common
+package com.yousufsohail.android.common
 
 interface BaseUseCase<Input, Output> {
     suspend fun execute(input: Input): Output

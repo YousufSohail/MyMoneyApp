@@ -1,9 +1,8 @@
 package com.yousufsohail.android.home.api
 
-import com.yousufsohail.android.home.models.ApiResponse
-import com.yousufsohail.android.network.BaseService
-import com.yousufsohail.android.network.Resource
-import com.yousufsohail.android.resources.StringResourceProvider
+import com.yousufsohail.android.common.network.BaseService
+import com.yousufsohail.android.common.network.Resource
+import com.yousufsohail.android.common.resources.StringResourceProvider
 import kotlinx.coroutines.CoroutineDispatcher
 import javax.inject.Inject
 

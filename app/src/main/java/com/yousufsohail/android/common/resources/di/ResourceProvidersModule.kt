@@ -1,7 +1,7 @@
-package com.yousufsohail.android.resources.di
+package com.yousufsohail.android.common.resources.di
 
-import com.yousufsohail.android.resources.DefaultStringResourceProvider
-import com.yousufsohail.android.resources.StringResourceProvider
+import com.yousufsohail.android.common.resources.DefaultStringResourceProvider
+import com.yousufsohail.android.common.resources.StringResourceProvider
 import dagger.Binds
 import dagger.Module
 import dagger.hilt.InstallIn

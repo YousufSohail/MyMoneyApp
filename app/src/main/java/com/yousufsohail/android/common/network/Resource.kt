@@ -1,4 +1,4 @@
-package com.yousufsohail.android.network
+package com.yousufsohail.android.common.network
 
 sealed class Resource<T>{
     data class Data<T>(val data : T) : Resource<T>()
