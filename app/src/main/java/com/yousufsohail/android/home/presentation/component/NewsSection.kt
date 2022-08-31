@@ -9,6 +9,7 @@ import androidx.compose.foundation.layout.size
 import androidx.compose.foundation.lazy.LazyColumn
 import androidx.compose.foundation.lazy.LazyRow
 import androidx.compose.foundation.lazy.items
+import androidx.compose.material.MaterialTheme
 import androidx.compose.material.Text
 import androidx.compose.runtime.Composable
 import androidx.compose.ui.Modifier
@@ -44,7 +45,7 @@ fun NewsSection(trendingNews: List<NewsResults.News>, news: List<NewsResults.New
 
     Column(modifier = Modifier.fillMaxSize()) {
 
-        Text(text = stringResource(R.string.top_news))
+        Text(text = stringResource(R.string.top_news), style = MaterialTheme.typography.h5)
 
         LazyRow(modifier = Modifier.fillMaxWidth()) {
             items(trendingNews) { news ->
@@ -64,7 +65,7 @@ fun NewsSection(trendingNews: List<NewsResults.News>, news: List<NewsResults.New
             }
         }
 
-        Text(text = stringResource(R.string.full_coverage))
+        Text(text = stringResource(R.string.full_coverage), style = MaterialTheme.typography.h5)
 
         LazyColumn(modifier = Modifier.fillMaxWidth()) {
             items(news) { news ->
@@ -79,9 +80,9 @@ fun NewsSection(trendingNews: List<NewsResults.News>, news: List<NewsResults.New
                         modifier = Modifier.height(200.dp)
                     )
                 }
-                Text(text = news.title)
-                Text(text = news.publishedAt)
-                Text(text = news.description)
+                Text(text = news.title, style = MaterialTheme.typography.subtitle1)
+                Text(text = news.publishedAt, style = MaterialTheme.typography.caption)
+                Text(text = news.description, style = MaterialTheme.typography.body2)
             }
         }
     }
