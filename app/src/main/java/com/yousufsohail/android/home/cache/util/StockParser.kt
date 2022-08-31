@@ -26,6 +26,7 @@ class StockParser @Inject constructor() : CSVParser<Stocks> {
                         price = Random.nextDouble(1.11, 99.99).toString()
                     )
                 }
+                //TODO: Filter stocks to show unique items from raw data
                 .also {
                     csvReader.close()
                 }

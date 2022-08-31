@@ -1,7 +1,7 @@
 dependencies {
 
     implementation 'androidx.core:core-ktx:1.8.0'
-    implementation 'androidx.appcompat:appcompat:1.4.2'
+    implementation 'androidx.appcompat:appcompat:1.5.0'
     implementation 'com.google.android.material:material:1.6.1'
     implementation 'androidx.constraintlayout:constraintlayout:2.1.4'
 
@@ -14,10 +14,15 @@ dependencies {
     kapt "com.squareup.moshi:moshi-kotlin-codegen:1.13.0"
 
     //LifeCycle
-    implementation "androidx.lifecycle:lifecycle-common-java8:2.4.1"
+    def lifecycle = "2.5.1"
+    implementation "androidx.lifecycle:lifecycle-common-java8:$lifecycle"
+
+    implementation "androidx.lifecycle:lifecycle-viewmodel-ktx:$lifecycle"
+    implementation "androidx.lifecycle:lifecycle-runtime-ktx:$lifecycle"
+    implementation "androidx.lifecycle:lifecycle-livedata-ktx:$lifecycle"
 
     // Jetpack Compose
-    def compose = "1.1.1"
+    def compose = "1.2.1"
     implementation "androidx.compose.ui:ui:$compose"
     implementation "androidx.compose.foundation:foundation:$compose"
     implementation "androidx.compose.runtime:runtime-livedata:$compose"
@@ -28,18 +33,20 @@ dependencies {
     debugImplementation "androidx.compose.ui:ui-tooling:$compose"
     implementation "androidx.compose.ui:ui-tooling-preview:$compose"
 
-    // Jetpack Navigation
-    implementation "androidx.navigation:navigation-ui:2.4.2"
-    implementation "androidx.navigation:navigation-fragment:2.4.2"
-    implementation "androidx.navigation:navigation-fragment-ktx:2.4.2"
-    implementation "androidx.navigation:navigation-ui-ktx:2.4.2"
+    // Accompanist
+    def accompanist_version = "0.23.1"
+    implementation "com.google.accompanist:accompanist-swiperefresh:$accompanist_version"
 
-    // Kotlin Extensions for Lifecycle arch components
-    implementation "androidx.lifecycle:lifecycle-viewmodel-ktx:2.4.1"
-    implementation "androidx.lifecycle:lifecycle-runtime-ktx:2.4.1"
-    implementation "androidx.lifecycle:lifecycle-livedata-ktx:2.4.1"
-    implementation "androidx.fragment:fragment-ktx:1.4.1"
-    implementation "androidx.activity:activity-ktx:1.4.0"
+    // Jetpack Navigation
+    def navigation = "2.5.1"
+    implementation "androidx.navigation:navigation-ui:$navigation"
+    implementation "androidx.navigation:navigation-fragment:$navigation"
+    implementation "androidx.navigation:navigation-fragment-ktx:$navigation"
+    implementation "androidx.navigation:navigation-ui-ktx:$navigation"
+
+    // Kotlin Extensions
+    implementation "androidx.fragment:fragment-ktx:1.5.2"
+    implementation "androidx.activity:activity-ktx:1.5.1"
 
     // DI Hilt
     implementation "com.google.dagger:hilt-android:2.42"
@@ -52,7 +59,8 @@ dependencies {
     //Gson
     implementation 'com.google.code.gson:gson:2.9.1'
 
-    implementation "io.coil-kt:coil:2.1.0"
+    def lottie_compose_version = "5.0.3"
+    implementation "com.airbnb.android:lottie-compose:$lottie_compose_version"
 
     testImplementation 'junit:junit:4.13.2'
     testImplementation "org.mockito:mockito-core:2.23.0"

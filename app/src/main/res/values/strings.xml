@@ -7,4 +7,7 @@
     <string name="internal_server_error">Something went wrong at our end, please try again later.</string>
     <string name="bad_gateway_message">We are having trouble reaching server, please try again later.</string>
     <string name="unexpected_error">Something unexpected happened, please try again later.</string>
+    <string name="cta_retry">RETRY</string>
+    <string name="retry_title">Something went wrong…</string>
+    <string name="retry_subtitle">An alien is probably blocking your signal.</string>
 </resources>
