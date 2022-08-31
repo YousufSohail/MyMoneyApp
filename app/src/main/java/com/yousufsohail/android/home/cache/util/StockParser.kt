@@ -9,11 +9,11 @@ import java.io.InputStream
 import java.io.InputStreamReader
 import javax.inject.Inject
 import javax.inject.Singleton
-import kotlin.random.Random
 
 @Singleton
 class StockParser @Inject constructor() : CSVParser<Stocks> {
     override suspend fun parse(stream: InputStream): List<Stocks> {
+
         val csvReader = CSVReader(InputStreamReader(stream))
         return withContext(Dispatchers.IO) {
             csvReader
@@ -23,7 +23,7 @@ class StockParser @Inject constructor() : CSVParser<Stocks> {
                     val symbol = line.getOrNull(0)
                     Stocks(
                         symbol = symbol ?: return@mapNotNull null,
-                        price = Random.nextDouble(1.11, 99.99).toString()
+                        price = """${"$"}${roundOffDecimal(line[1].toDouble())}"""
                     )
                 }
                 .also {
