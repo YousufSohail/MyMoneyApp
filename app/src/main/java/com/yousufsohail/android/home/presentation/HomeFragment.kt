@@ -50,7 +50,7 @@ class HomeFragment : Fragment() {
                         ) {
                             Column {
                                 StockTicker(stocks)
-                                NewsSection(news.subList(0, 5), news.drop(6))
+                                NewsSection(news.take(6), news.drop(6))
                             }
                         }
                     }
