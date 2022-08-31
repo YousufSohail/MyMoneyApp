@@ -15,7 +15,7 @@ class StocksRepositoryImpl @Inject constructor(
 ) : StocksRepository {
 
     override suspend fun getStocks(): List<Stocks> {
-        return stocksParser.parse(context.assets.open("stocks.csv"))
+        return stocksParser.parse(stream = context.assets.open("stocks.csv"))
     }
 }
 

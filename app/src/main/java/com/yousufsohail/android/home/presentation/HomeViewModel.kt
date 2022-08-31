@@ -9,7 +9,6 @@ import com.yousufsohail.android.home.domain.model.NewsResults
 import com.yousufsohail.android.home.domain.model.Stocks
 import com.yousufsohail.android.home.domain.usecase.GetNewsUseCase
 import com.yousufsohail.android.home.domain.usecase.GetStocksUseCase
-import com.yousufsohail.android.home.domain.usecase.GetTrendingNewsUseCase
 import dagger.hilt.android.lifecycle.HiltViewModel
 import kotlinx.coroutines.flow.launchIn
 import kotlinx.coroutines.flow.onEach
@@ -19,7 +18,6 @@ import javax.inject.Inject
 @HiltViewModel
 class HomeViewModel @Inject constructor(
     private val getStocksUseCase: GetStocksUseCase,
-    private val getTrendingNewsUseCase: GetTrendingNewsUseCase,
     private val getNewsUseCase: GetNewsUseCase,
 ) : ViewModel() {
 

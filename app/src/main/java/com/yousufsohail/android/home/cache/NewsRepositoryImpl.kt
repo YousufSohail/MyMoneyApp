@@ -15,10 +15,6 @@ class NewsRepositoryImpl @Inject constructor(
     private val gson: Gson
 ) : NewsRepository {
 
-    override fun getTrendingNews(): List<NewsResults.News> {
-        TODO("Not yet implemented")
-    }
-
     override fun getNews(): List<NewsResults.News> {
         //TODO: Improvement: first save in to the local storage then get
         return NewsParser.parse(context, gson)
