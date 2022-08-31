@@ -10,4 +10,7 @@
     <string name="cta_retry">RETRY</string>
     <string name="retry_title">Something went wrong…</string>
     <string name="retry_subtitle">An alien is probably blocking your signal.</string>
+    <string name="top_news">Top News</string>
+    <string name="full_coverage">Full Coverage</string>
+    <string name="cd_news_item">This is a news</string>
 </resources>

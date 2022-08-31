@@ -37,6 +37,10 @@ dependencies {
     def accompanist_version = "0.23.1"
     implementation "com.google.accompanist:accompanist-swiperefresh:$accompanist_version"
 
+    // Image with compose
+    def coil = "2.1.0"
+    implementation "io.coil-kt:coil-compose:$coil"
+
     // Jetpack Navigation
     def navigation = "2.5.1"
     implementation "androidx.navigation:navigation-ui:$navigation"

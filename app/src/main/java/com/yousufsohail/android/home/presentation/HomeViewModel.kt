@@ -82,6 +82,4 @@ class HomeViewModel @Inject constructor(
             }
         }.launchIn(viewModelScope)
     }
-
-
 }

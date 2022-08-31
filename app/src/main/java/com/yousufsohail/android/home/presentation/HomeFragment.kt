@@ -32,6 +32,7 @@ class HomeFragment : Fragment() {
     ): View {
         return ComposeView(requireContext()).apply {
             setContent {
+
                 val stocks = viewModel.stocks.value
                 val news = viewModel.news.value
                 val loadingStocks = viewModel.loadingStocks.value
