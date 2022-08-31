@@ -10,8 +10,10 @@ import com.yousufsohail.android.home.domain.model.Stocks
 import com.yousufsohail.android.home.domain.usecase.GetNewsUseCase
 import com.yousufsohail.android.home.domain.usecase.GetStocksUseCase
 import dagger.hilt.android.lifecycle.HiltViewModel
+import kotlinx.coroutines.delay
 import kotlinx.coroutines.flow.launchIn
 import kotlinx.coroutines.flow.onEach
+import kotlinx.coroutines.isActive
 import kotlinx.coroutines.launch
 import javax.inject.Inject
 
@@ -29,8 +31,11 @@ class HomeViewModel @Inject constructor(
     val loadingStocks = mutableStateOf(false)
     val loadingNews = mutableStateOf(false)
 
+    private var stockPrices: List<Stocks> = emptyList()
+
     init {
         onTriggerEvent(HomeEvent.FetchEvent)
+        subscribeToStockUpdate()
     }
 
     fun onTriggerEvent(event: HomeEvent) {
@@ -59,13 +64,24 @@ class HomeViewModel @Inject constructor(
         getStocksUseCase.execute(forceRefresh).onEach { dataState ->
             loadingStocks.value = dataState.loading
             dataState.data?.let { list ->
+                stockPrices = list
                 stocks.value = listOf()
-                stocks.value = list
+                stocks.value = stockPrices.distinctBy { it.symbol }
             }
             dataState.error?.let { error ->
                 stocks.value = listOf()
             }
         }.launchIn(viewModelScope)
+    }
+
+    private fun subscribeToStockUpdate() {
+        viewModelScope.launch {
+            while (viewModelScope.isActive) {
+                delay(1000)
+                stockPrices.shuffled()
+                stocks.value = stockPrices.distinctBy { it.symbol }
+            }
+        }
     }
 
     private suspend fun fetchNews(forceRefresh: Boolean) {

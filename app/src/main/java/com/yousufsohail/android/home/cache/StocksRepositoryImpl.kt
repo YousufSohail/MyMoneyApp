@@ -15,7 +15,7 @@ class StocksRepositoryImpl @Inject constructor(
 ) : StocksRepository {
 
     override suspend fun getStocks(): List<Stocks> {
-        return stocksParser.parse(stream = context.assets.open("stocks.csv")).distinctBy { it.symbol }
+        return stocksParser.parse(stream = context.assets.open("stocks.csv"))
     }
 }
 
