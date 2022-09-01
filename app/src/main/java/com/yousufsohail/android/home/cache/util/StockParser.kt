@@ -23,7 +23,7 @@ class StockParser @Inject constructor() : CSVParser<Stocks> {
                     val symbol = line.getOrNull(0)
                     Stocks(
                         symbol = symbol ?: return@mapNotNull null,
-                        price = """${"$"}${roundOffDecimal(line[1].toDouble())}"""
+                        price = roundOffDecimal(line[1].toDouble())
                     )
                 }
                 .also {

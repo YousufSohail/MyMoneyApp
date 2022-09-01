@@ -31,7 +31,7 @@ class HomeViewModel @Inject constructor(
     val loadingStocks = mutableStateOf(false)
     val loadingNews = mutableStateOf(false)
 
-    private var stockPrices: List<Stocks> = emptyList()
+    private var allStockPrices: List<Stocks> = emptyList()
 
     init {
         onTriggerEvent(HomeEvent.FetchEvent)
@@ -64,9 +64,8 @@ class HomeViewModel @Inject constructor(
         getStocksUseCase.execute(forceRefresh).onEach { dataState ->
             loadingStocks.value = dataState.loading
             dataState.data?.let { list ->
-                stockPrices = list
-                stocks.value = listOf()
-                stocks.value = stockPrices.distinctBy { it.symbol }
+                allStockPrices = list
+                stocks.value = allStockPrices.distinctBy { it.symbol }.sortedBy { it.symbol }
             }
             dataState.error?.let { error ->
                 stocks.value = listOf()
@@ -78,8 +77,8 @@ class HomeViewModel @Inject constructor(
         viewModelScope.launch {
             while (viewModelScope.isActive) {
                 delay(1000)
-                stockPrices.shuffled()
-                stocks.value = stockPrices.distinctBy { it.symbol }
+                val shuffledStockPrices = allStockPrices.shuffled().distinctBy { it.symbol }.sortedBy { it.symbol }
+                stocks.value = shuffledStockPrices
             }
         }
     }
