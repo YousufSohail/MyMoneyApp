@@ -10,7 +10,9 @@ import javax.inject.Inject
 
 interface GetStocksUseCase : BaseUseCase<Boolean, Flow<DataState<List<Stocks>>>>
 
-class DefaultGetStocksUseCase @Inject constructor(private val stocksRepository: StocksRepository) : GetStocksUseCase {
+class DefaultGetStocksUseCase @Inject constructor(
+    private val stocksRepository: StocksRepository
+) : GetStocksUseCase {
 
     override suspend fun execute(input: Boolean): Flow<DataState<List<Stocks>>> = flow {
         try {
