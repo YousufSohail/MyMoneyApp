@@ -7,6 +7,7 @@ import android.view.ViewGroup
 import androidx.compose.foundation.layout.Box
 import androidx.compose.foundation.layout.Column
 import androidx.compose.foundation.layout.fillMaxSize
+import androidx.compose.foundation.layout.padding
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.platform.ComposeView
 import androidx.compose.ui.unit.dp
@@ -48,7 +49,7 @@ class HomeFragment : Fragment() {
                             state = rememberSwipeRefreshState(loadingStocks || loadingNews),
                             onRefresh = { viewModel.onTriggerEvent(HomeEvent.RefreshFetchEvent) },
                         ) {
-                            Column {
+                            Column(modifier = Modifier.padding(8.dp)) {
                                 StockTicker(stocks)
                                 NewsSection(news.take(6), news.drop(6))
                             }

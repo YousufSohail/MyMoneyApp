@@ -13,4 +13,5 @@
     <string name="top_news">Top News</string>
     <string name="full_coverage">Full Coverage</string>
     <string name="cd_news_item">This is a news</string>
+    <string name="ticker_section_header">Most followed stocks</string>
 </resources>
