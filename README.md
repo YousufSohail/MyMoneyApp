@@ -8,6 +8,9 @@ Developing this finanial app as a playground to implement different aspects of a
 </div>
 <br/>
 
+![image](https://user-images.githubusercontent.com/2059838/187963456-7599814f-67c8-46b1-81a2-28886a9349bd.png)
+
+
 ## 🛠 Built With
 
 - [Kotlin](https://kotlinlang.org/) - First class and official programming language for Android development.
