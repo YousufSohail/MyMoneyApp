@@ -6,18 +6,16 @@ Developing this finanial app as a playground to implement different aspects of a
 get hands-on with all the cool new stuff and also to demonstrate my expertise on them to potential employers. 😄
 
 <div align="center">
-  <sub>Built with ❤︎{} by <a href="https://www.linkedin.com/in/yousufsohail/">YousufSohail</a></sub>
+  <sub>Built with ❤︎ by <a href="https://www.linkedin.com/in/yousufsohail/">YousufSohail</a></sub>
 </div>
 <br/>
-
-![image](https://user-images.githubusercontent.com/2059838/187963456-7599814f-67c8-46b1-81a2-28886a9349bd.png)
 
 <div align="center">
 <img src="https://github.com/YousufSohail/MyMoneyApp/blob/main/screenshots/mymoneyapp_homescreen.png" width="230px" />
 <p align = "center">
 
 *Shimmer animation while loading, then it shows trending stock with live updates and then horizontal and vertical news
-reel*
+reels*
 
 </p>
 </div>
